@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balik Harmoni — Herbal & Terapi Alami</title>
+  <meta name="description" content="Produk herbal premium dan layanan terapi alami terpercaya. Madu murni, herbal pilihan, untuk kesehatan dan keseimbangan hidupmu." />
+
+  <!-- ================================================
+       GOOGLE ANALYTICS 4
+       Ganti G-XXXXXXXXXX dengan Measurement ID kamu
+       di Google Analytics > Admin > Data Streams
+  ================================================ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+
+    // Helper tracking function — dipanggil di setiap CTA
+    function trackCTA(eventName, label) {
+      gtag('event', eventName, {
+        event_category: 'CTA',
+        event_label: label || eventName
+      });
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', { content_name: label || eventName });
+      }
+    }
+  </script>
+
+  <!-- ================================================
+       META PIXEL (Facebook / Instagram Ads)
+       Ganti YOUR_PIXEL_ID dengan Pixel ID kamu
+       di Meta Business Suite > Events Manager
+  ================================================ -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo-balikharmoni.png" alt="Balik Harmoni" class="logo-img" />
+
+        
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#produk"    class="nav-link" onclick="trackCTA('nav_produk','Navbar Produk')">Produk</a></li>
+        <li><a href="#tentang"   class="nav-link" onclick="trackCTA('nav_tentang','Navbar Tentang')">Tentang</a></li>
+        <li><a href="#terapi"    class="nav-link" onclick="trackCTA('nav_terapi','Navbar Terapi')">Terapi</a></li>
+        <li><a href="#manfaat"   class="nav-link" onclick="trackCTA('nav_manfaat','Navbar Manfaat')">Manfaat</a></li>
+        <li><a href="#testimoni" class="nav-link" onclick="trackCTA('nav_testi','Navbar Testimoni')">Testimoni</a></li>
+        <li>
+          <a href="https://www.google.com/maps/dir//Balik+Harmoni+%2F+Rumah+Terapi+Selaras+Depok,+Komplek+Griya+Pandawa+Jl.+Taman+Pandawa+No.05,+Mekar+Jaya,+Sukmajaya,+Depok+City,+West+Java+16411/@-6.3878486,106.8177975,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69ebd922242f71:0xb3ca1252e8d849fe!2m2!1d106.8387151!2d-6.3896999?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+             target="_blank" class="nav-cta" onclick="trackCTA('nav_order','Navbar Pesan Sekarang')">
+            Lihat Lokasi
+          </a>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <!-- Animated background -->
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="floating-leaves" id="floatingLeaves"></div>
+    </div>
+
+    <div class="hero-grid">
+
+      <!-- Left: Text -->
+      <div class="hero-text" id="heroText">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          🍯 Alami · Terpercaya · Tersertifikasi
+        </div>
+        <h1 class="hero-heading">
+          Kembali Sehat Secara Alami,
+          <em class="hero-highlight">Kembali Hidup Harmoni</em><br/>
+          
+        </h1>
+        <p class="hero-sub">
+         Tubuh lelah, lambung bermasalah, atau sirkulasi darah tidak lancar? Balik Harmoni menghadirkan solusi alami melalui madu herbal berkualitas dan terapi tradisional seperti bekam, totok punggung, dan terapi lintah untuk membantu tubuh kembali seimbang secara alami dan menyeluruh.
+        </p>
+        <div class="hero-btns">
+          <a href="https://shopee.co.id/balikharmoni?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+             target="_blank" class="btn-primary"
+             onclick="trackCTA('hero_pesan','Hero Pesan Sekarang')">
+            🛒 Pesan Sekarang
+          </a>
+          <a href="#terapi" class="btn-ghost" onclick="trackCTA('hero_terapi','Hero Lihat Terapi')">
+            Lihat Layanan →
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hs-item">
+            <strong class="counter" data-target="0">0</strong><sup>+</sup>
+            <span>Pelanggan</span>
+          </div>
+          <div class="hs-sep"></div>
+          <div class="hs-item">
+            <strong class="counter" data-target="0">0</strong><sup>+</sup>
+            <span>Produk</span>
+          </div>
+          <div class="hs-sep"></div>
+          <div class="hs-item">
+            <strong class="counter" data-target="0">0</strong><sup>+</sup>
+            <span>Tahun</span>
+          </div>
+        </div>
+      </div>
+
+    <!-- Right: Auto Slider -->
+<div class="carousel-wrapper visible">
+  <div class="carousel-stage">
+
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- Slide 1 -->
+      <div class="cslide">
+        <img src="pure-honey.png" class="cslide-img" alt="Produk 1">
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="cslide">
+        <img src="maag-honey.png" class="cslide-img" alt="Produk 2">
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="cslide">
+        <img src="heart-honey.png" class="cslide-img" alt="Produk 3">
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+    </div><!-- /hero-grid -->
+
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ MARQUEE ═══════════════ -->
+  <div class="marquee-bar">
+    <div class="marquee-inner">
+      <span>🍯 Madu Murni Asli</span>
+      <span>🍯 100% Bahan Alami</span>
+      <span>✅ Bersertifikat Halal</span>
+      <span>🚚 Kirim ke Seluruh Indonesia</span>
+      <span>💆 Terapi Profesional</span>
+      <span>🌱 Organik & Terpercaya</span>
+      <span>⭐ Pelanggan Puas</span>
+      <span>🏥 Izin Resmi</span>
+      <!-- Repeat for seamless loop -->
+      <span>🍯 Madu Murni Asli</span>
+      <span>🍯 100% Bahan Alami</span>
+      <span>✅ Bersertifikat Halal</span>
+      <span>🚚 Kirim ke Seluruh Indonesia</span>
+      <span>💆 Terapi Profesional</span>
+      <span>🌱 Organik & Terpercaya</span>
+      <span>⭐ Pelanggan Puas</span>
+      <span>🏥 Izin  Resmi</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ TENTANG ═══════════════ -->
+  <section class="tentang section" id="tentang">
+    <div class="container">
+      <div class="tentang-grid">
+        <div class="tentang-visual reveal">
+          <div class="tv-card tv-card-main">
+            <img src="produk1.png" alt="Balik Harmoni" class="tv-logo-big" />
+            <p class="tv-tagline">"Kembali ke alam,<br/>kembali ke dirimu."</p>
+          </div>
+          <div class="tv-card tv-card-float tv-cf-1">
+            <span>🏆</span>
+            <strong>8+ Tahun</strong>
+            <small>Berpengalaman</small>
+          </div>
+          <div class="tv-card tv-card-float tv-cf-2">
+            <span>🌍</span>
+            <strong>34 Provinsi</strong>
+            <small>Jangkauan Kirim</small>
+          </div>
+        </div>
+
+        <div class="tentang-text reveal">
+          <span class="section-label">Tentang Kami</span>
+          <h2 class="section-title">Kami Percaya Alam<br/>Punya Jawabannya</h2>
+          <p>Balik Harmoni lahir dari kecintaan kami pada kearifan lokal dan kepercayaan bahwa alam Indonesia menyimpan solusi terbaik untuk kesehatan manusia.</p>
+          <p>Sejak 2016, kami hadir menghadirkan produk herbal berkualitas tinggi — mulai dari madu murni bersertifikasi hingga layanan terapi tradisional yang dipandu oleh tenaga ahli berpengalaman.</p>
+          <div class="tentang-values">
+            <div class="tv-val">
+              <div class="tv-val-icon">🍯</div>
+              <div>
+                <strong>Alami 100%</strong>
+                <span>Tanpa bahan kimia tambahan</span>
+              </div>
+            </div>
+            <div class="tv-val">
+              <div class="tv-val-icon">✅</div>
+              <div>
+                <strong>Tersertifikasi</strong>
+                <span>Halal & izin resmi</span>
+              </div>
+            </div>
+            <div class="tv-val">
+              <div class="tv-val-icon">💚</div>
+              <div>
+                <strong>Berkelanjutan</strong>
+                <span>Ramah lingkungan</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/62895325866470?text=Halo%20Balik%20Harmoni%2C%20saya%20ingin%20tahu%20lebih%20lanjut"
+             target="_blank" class="btn-primary"
+             onclick="trackCTA('tentang_hubungi','Tentang Hubungi Kami')">
+            Hubungi Kami →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRODUK SECTION ═══════════════ -->
+  <section class="produk section" id="produk">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Koleksi Produk</span>
+        <h2 class="section-title">Madu Selaras, Ikhtiar Alami untuk <br/>Kesehatan Tubuh</h2>
+        <p class="section-desc">Balik Harmoni menghadirkan terapi tradisional seperti bekam, totok punggung, dan terapi lintah (hirudo) yang dipadukan dengan madu herbal alami berkualitas. Setiap sesi dilakukan secara profesional untuk membantu melancarkan sirkulasi darah, merilekskan tubuh, dan mendukung pemulihan alami dari dalam. Tersedia juga produk madu pilihan yang diformulasikan khusus untuk berbagai kebutuhan kesehatan</p>
+      </div>
+
+      <div class="produk-grid">
+        <div class="produk-card reveal" onclick="trackCTA('produk_card_honey','Produk Selaras Pure Honey')">
+          <div class="pk-img-wrap">
+            <img src="pure-honey.png" alt="Selaras Pure Honey" class="pk-img" />
+            <span class="pk-badge">Unggulan</span>
+          </div>
+          <div class="pk-body">
+            <h3>Pure Honey</h3>
+            <p>Madu murni dari lebah berkualitas istimewa, berkhasiat membantu menambah tenaga dan menjaga kesehatan tubuh.</p>
+            <div class="pk-footer">
+              <span class="pk-price">Rp 40.000</span>
+              <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20pesan%20Selaras%20Pure%20Honey"
+                 target="_blank" class="pk-btn" onclick="event.stopPropagation();trackCTA('produk_order_honey','Card Selaras Pure Honey')">
+                Pesan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="produk-card reveal" onclick="trackCTA('produk_card_herbal','Produk Herbal Stamina')">
+          <div class="pk-img-wrap pk-placeholder">
+            <img src="heart-honey.png" alt="Selaras Pure Honey" class="pk-img" />
+            <span class="pk-badge pk-badge-green">Herbal</span>
+          </div>
+          <div class="pk-body">
+            <h3>Heart Honey</h3>
+            <p>Suplemen untuk meningkatkan kesehatan jantung. Bermanfaat melancarkan sirkulasi darah, membuka penyumbatan pembuluh darah, serta menurunkan kolesterol, kadar gula darah, dan tekanan darah tinggi.</p>
+            <div class="pk-footer">
+              <span class="pk-price">Rp 40.000</span>
+              <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20pesan%20Herbal%20Stamina%20Mix"
+                 target="_blank" class="pk-btn" onclick="event.stopPropagation();trackCTA('produk_order_herbal','Card Herbal Stamina')">
+                Pesan
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="produk-card reveal" onclick="trackCTA('produk_card_propolis','Produk Propolis')">
+          <div class="pk-img-wrap pk-placeholder pk-ph-gold">
+            <img src="maag-honey.png" alt="Selaras Pure Honey" class="pk-img" />
+            <span class="pk-badge pk-badge-gold">Imunitas</span>
+          </div>
+          <div class="pk-body">
+            <h3>Maag Honey</h3>
+            <p>Suplemen untuk menjaga kesehatan lambung. Bermanfaat meringankan penyakit maag, nyeri lambung, thypus, dan deman berdarah.</p>
+            <div class="pk-footer">
+              <span class="pk-price">Rp 40.000</span>
+              <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20pesan%20Propolis%20Murni"
+                 target="_blank" class="pk-btn" onclick="event.stopPropagation();trackCTA('produk_order_propolis','Card Propolis')">
+                Pesan
+              </a>
+            </div>
+          </div>
+        </div>
+
+      
+  </section>
+
+  <!-- ═══════════════ MANFAAT ═══════════════ -->
+  <section class="manfaat section" id="manfaat">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Mengapa Kami?</span>
+        <h2 class="section-title">Keunggulan yang<br/>Bisa Kamu Rasakan</h2>
+      </div>
+      <div class="manfaat-grid">
+        <div class="mf-card reveal">
+          <div class="mf-icon">🍯</div>
+          <h3>100% Alami</h3>
+          <p>Semua produk bebas bahan kimia sintetis. Murni dari alam Indonesia yang kaya hayati.</p>
+        </div>
+        <div class="mf-card reveal">
+          <div class="mf-icon">✅</div>
+          <h3>Bersertifikat Halal</h3>
+          <p>Telah mendapatkan sertifikasi halal MUI dan izin edar resmi Dinkes Indonesia.</p>
+        </div>
+        <div class="mf-card reveal">
+          <div class="mf-icon">🔬</div>
+          <h3>Teruji Klinis</h3>
+          <p>Formula dan khasiat produk telah melalui uji laboratorium dengan standar mutu tinggi.</p>
+        </div>
+        <div class="mf-card reveal">
+          <div class="mf-icon">🚚</div>
+          <h3>Pengiriman Aman</h3>
+          <p>Dikemas dengan packaging premium dan dikirim ke seluruh provinsi di Indonesia.</p>
+        </div>
+        <div class="mf-card reveal">
+          <div class="mf-icon">💬</div>
+          <h3>Konsultasi Gratis</h3>
+          <p>Tim kami siap membantu memilih produk yang paling sesuai dengan kebutuhanmu.</p>
+        </div>
+        <div class="mf-card reveal">
+          <div class="mf-icon">♻️</div>
+          <h3>Ramah Lingkungan</h3>
+          <p>Proses produksi berkelanjutan yang menjaga ekosistem dan mendukung petani lokal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TERAPI ═══════════════ -->
+  <section class="terapi section" id="terapi">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Layanan Terapi</span>
+        <h2 class="section-title">Pulihkan Tubuh &<br/>Jiwa Secara Alami</h2>
+        <p class="section-desc">Dipandu tenaga terapis berpengalaman menggunakan metode alami tradisional yang telah terbukti selama ratusan tahun.</p>
+      </div>
+
+      <div class="terapi-grid">
+        <div class="tr-card reveal">
+          <div class="tr-num">01</div>
+          <h3>Bekam</h3>
+          <p>Terapi bekam sunnah untuk membuang darah kotor, melancarkan peredaran darah, dan memulihkan vitalitas tubuh secara alami menggunakan metode vakum yang aman dan terbukti.</p>
+          <a href="https://wa.me/62895325866470?text=Halo%2C%20saya%20ingin%20booking%20bekam"
+             target="_blank" class="tr-link" onclick="trackCTA('terapi_refleksi','Terapi Refleksi')">
+            Booking Sekarang →
+          </a>
+        </div>
+        <div class="tr-card reveal">
+          <div class="tr-num">02</div>
+          <h3>Totok Punggung</h3>
+          <p>Merangsang titik-titik energi dan simpul saraf di area punggung untuk membantu keseimbangan tubuh.
+</p>
+          <a href="https://wa.me/62895325866470?text=Halo%2C%20saya%20ingin%20booking%20Totok%20Punggung"
+             target="_blank" class="tr-link" onclick="trackCTA('terapi_bekam','Terapi Bekam')">
+            Booking Sekarang →
+          </a>
+        </div>
+        <div class="tr-card reveal">
+          <div class="tr-num">03</div>
+          <h3>Terapi Lintah (Hirudo)
+</h3>
+          <p>Manfaat enzim hirudin dalam terapi lintah untuk membantu melancarkan sirkulasi darah.</p>
+          <a href="https://wa.me/62895325866470?text=Halo%2C%20saya%20ingin%20booking%20Terapi%20Lintah"
+             target="_blank" class="tr-link" onclick="trackCTA('terapi_aroma','Terapi Aromaterapi')">
+            Booking Sekarang →
+          </a>
+        </div>
+  
+  </section>
+
+  <!-- ═══════════════ TESTIMONI ═══════════════ -->
+  <section class="testimoni section" id="testimoni">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Testimoni</span>
+        <h2 class="section-title">Kata Mereka yang<br/>Sudah Merasakan</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Madunya bagus banget utk kesehatan. Cocok mengatasi keluhan yg saya alami. slalu stok madunya dirmh.. mantap👍
+"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">SR</div>
+            <div>
+              <strong>Ida Hati</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Pelayanannya memuaskan .Alhamdulillah...sudah 2 × dilintah hasilnya enak ke badan.
+"</p>
+          <div class="testi-author">
+            <div class="testi-avatar">BW</div>
+            <div>
+              <strong>Alghifary Luthfi</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Tempatnya nyaman dan bersih. Terapi pijat dan lintahnya sangat bagus. Recomended sekali terapi kesini 💯
+."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">NA</div>
+            <div>
+              <strong>Aulia Karima</strong>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Pelayanan memuaskan, tempat strategis, ada madu dan obat herbal juga.
+Top 👍 deh pokonya,
+Kemarin terapi bekam, next mau nyoba terapi Lintah."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">DH</div>
+            <div>
+              <strong>Pebri</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA BANNER ═══════════════ -->
+  <section class="cta-banner section">
+    <div class="cta-bg-anim">
+      <div class="cta-blob cb-1"></div>
+      <div class="cta-blob cb-2"></div>
+    </div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <span class="section-label cta-label">Mulai Perjalananmu</span>
+        <h2>Siap Hidup Lebih<br/>Sehat & Harmonis?</h2>
+        <p>Konsultasikan kebutuhanmu dengan tim kami. Kami akan bantu menemukan produk atau terapi yang paling tepat untukmu.</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/62895325866470?text=Halo%20Balik%20Harmoni%2C%20saya%20ingin%20konsultasi%20"
+             target="_blank" class="btn-primary btn-lg"
+             onclick="trackCTA('cta_banner_wa','CTA Banner WhatsApp')">
+            💬 Chat WhatsApp Sekarang
+          </a>
+        
+        </div>
+        <p class="cta-note">✅ Respon cepat · Konsultasi gratis</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" id="kontak">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+<div class="footer-brand">
+  <img src="logo-balikharmoni.png" alt="Balik Harmoni" class="footer-logo" />
+  <span class="brand-text">Balik Harmoni</span>
+</div>          <p>Produk herbal premium dan layanan terapi alami terpercaya untuk hidup yang lebih sehat dan harmonis.</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/balikharmoni?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fsoc" aria-label="Instagram" onclick="trackCTA('footer_ig','Footer Instagram')">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/62895325866470" target="_blank" class="fsoc" aria-label="WhatsApp" onclick="trackCTA('footer_wa','Footer WhatsApp')">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Produk</h4>
+          <ul>
+            <li><a href="#produk" onclick="trackCTA('footer_madu_selaras','Footer Madu Selaras')"> Pure Honey</a></li>
+            <li><a href="#produk" onclick="trackCTA('footer_herbal','Footer Herbal Stamina')">Heart Honey</a></li>
+            <li><a href="#produk" onclick="trackCTA('footer_propolis','Footer Propolis')">Maag Honey</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#terapi" onclick="trackCTA('footer_refleksi','Footer Refleksi')">Bekam</a></li>
+            <li><a href="#terapi" onclick="trackCTA('footer_bekam','Footer Bekam')">Totok Punggung</a></li>
+            <li><a href="#terapi" onclick="trackCTA('footer_aroma','Footer Aromaterapi')">Terapi Lintah (Hirudo)</a></li>
+            <li><a href="https://wa.me/62895325866470" target="_blank" onclick="trackCTA('footer_konsul','Footer Konsultasi')">Konsultasi Gratis</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul class="footer-contact">
+            <li>
+              <span>📍</span>
+              <span>Komplek Griya Pandawa Jl. Taman Pandawa No.05, Mekar Jaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16411</span>
+            </li>
+            <li>
+              <span>📞</span>
+              <a href="tel:+62895325866470" onclick="trackCTA('footer_telp','Footer Telepon')">+62 895-3258-66470</a>
+            </li>
+            <li>
+              <span>✉️</span>
+              <a href="mailto:info@balikharmoni.id" onclick="trackCTA('footer_email','Footer Email')">info@balikharmoni.id</a>
+            </li>
+            <li>
+              <span>⏰</span>
+              <span>Senin–Sabtu, 08.00–16.00 WIB</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Balik Harmoni. Semua hak dilindungi.</p>
+        <p>Made with 💚 untuk Indonesia yang lebih sehat</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/62895325866470?text=Halo%20Balik%20Harmoni%2C%20saya%20ingin%20bertanya"
+     target="_blank" class="wa-float" aria-label="Chat WhatsApp"
+     onclick="trackCTA('wa_float','WhatsApp Floating Button')">
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span class="wa-label">Chat Kami</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

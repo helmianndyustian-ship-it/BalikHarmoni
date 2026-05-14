@@ -277,12 +277,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     // Meta Pixel
-    if (typeof fbq === 'function') {
-      fbq('track', 'Lead', {
-        content_name: label || eventName,
-        content_category: 'CTA'
-      });
-    }
     // Debug log (remove in production)
     console.log(`[Track] ${eventName}${label ? ' — ' + label : ''}`);
   };

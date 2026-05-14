@@ -349,11 +349,10 @@ document.addEventListener('DOMContentLoaded', () => {
   ───────────────────────────────────────── */
   const productCards = document.querySelectorAll('.produk-card:not(.pk-cta)');
   const productNames = [
-    'Selaras Pure Honey',
-    'Herbal Stamina Mix',
-    'Propolis Murni',
-    'Madu Kelulut',
-    'Minyak Zaitun'
+    'Pure Honey',
+    'Heart Honey',
+    'Maag Honey'
+
   ];
 
   const productObserver = new IntersectionObserver((entries) => {

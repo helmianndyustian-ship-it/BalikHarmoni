@@ -267,19 +267,24 @@ document.addEventListener('DOMContentLoaded', () => {
      8. TRACKING HELPER (GA4 + Meta Pixel)
      Global function — also defined inline in HTML
   ───────────────────────────────────────── */
-  window.trackCTA = function(eventName, label) {
-    // Google Analytics 4
-    if (typeof gtag === 'function') {
-      gtag('event', eventName, {
-        event_category: 'CTA',
-        event_label: label || eventName,
-        value: 1
-      });
-    }
-    // Meta Pixel
-    // Debug log (remove in production)
-    console.log(`[Track] ${eventName}${label ? ' — ' + label : ''}`);
-  };
+ window.trackCTA = function(eventName, label) {
+  // Google Analytics 4
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, {
+      event_category: 'CTA',
+      event_label: label || eventName,
+      value: 1
+    });
+  }
+  // Meta Pixel — hanya untuk klik navbar
+  if (typeof fbq === 'function' && eventName.startsWith('nav_')) {
+    fbq('track', 'ViewContent', {
+      content_name: label || eventName,
+      content_category: 'Navigation'
+    });
+  }
+  console.log(`[Track] ${eventName}${label ? ' — ' + label : ''}`);
+};
 
 
   /* ─────────────────────────────────────────

@@ -20,13 +20,12 @@
     gtag('config', 'G-XXXXXXXXXX');
 
     // Helper tracking function — dipanggil di setiap CTA
-    function trackCTA(eventName, label) {
-      gtag('event', eventName, {
-        event_category: 'CTA',
-        event_label: label || eventName
-      });
-  
-    }
+   function trackCTA(eventName, label) {
+  gtamp('event', eventName, {
+    event_category: 'CTA',
+    event_label: label || eventName
+  });
+}
   </script>
 
   <!-- ================================================

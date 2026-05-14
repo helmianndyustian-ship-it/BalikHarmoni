@@ -1,3 +1,4 @@
+
 /* ════════════════════════════════════════════
    BALIK HARMONI — style.css
    Brand colors: Orange #E86018 · Green #3a7d44
@@ -450,6 +451,44 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: none; /* hilangkan shadow card */
 }
 
+.terapi-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+}
+
+.terapi-notice .tn-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.terapi-notice strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.terapi-notice p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.tr-img {
+  width: 50%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  opacity: 0.85;
+}
 /* ═══════════════════════════════════════
    TRACK (SLIDER UTAMA)
 ═══════════════════════════════════════ */
@@ -1199,6 +1238,44 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .section { padding: 64px 0; }
 
   .hamburger { display: flex; }
+
+  .tr-img {          /* ← tambah di sini, sebelum tanda } penutup */
+    width: 50%;
+    height: 160px;
+  }
+
+
+  .terapi-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #f59e0b;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+}
+
+.terapi-notice .tn-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.terapi-notice strong {
+  display: block;
+  color: #ffffff;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.terapi-notice p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.800rem;
+  line-height: 1.5;
+}
+
   .nav-links {
     position: fixed;
     top: 0; right: -100%;

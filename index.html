@@ -25,8 +25,7 @@
         event_category: 'CTA',
         event_label: label || eventName
       });
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', { content_name: label || eventName });
+    
       }
     }
   </script>

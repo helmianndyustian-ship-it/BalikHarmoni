@@ -20,7 +20,7 @@
 
     // Helper tracking function — dipanggil di setiap CTA
    function trackCTA(eventName, label) {
-  gtamp('event', eventName, {
+  gtag('event', eventName, {
     event_category: 'CTA',
     event_label: label || eventName
   });
@@ -394,7 +394,8 @@ src="https://www.facebook.com/tr?id=2082332262587014&ev=PageView&noscript=1"
           <h3>Bekam</h3>
           <p>Terapi bekam sunnah untuk membuang darah kotor, melancarkan peredaran darah, dan memulihkan vitalitas tubuh secara alami menggunakan metode vakum yang aman dan terbukti.</p>
           <a href="https://wa.me/62895325866470?text=Halo%2C%20saya%20ingin%20booking%20bekam"
-             target="_blank" class="tr-link" onclick="trackCTA('terapi_refleksi','Terapi Bekam')">
+             target="_blank" class="tr-link"
+             onclick="trackCTA('terapi_refleksi','Terapi Bekam'); fbq('track', 'Lead', {content_name: 'Terapi Bekam', content_category: 'Booking'});">
             Booking Sekarang →
           </a>
         </div>
@@ -405,7 +406,8 @@ src="https://www.facebook.com/tr?id=2082332262587014&ev=PageView&noscript=1"
           <p>Merangsang titik-titik energi dan simpul saraf di area punggung untuk membantu keseimbangan tubuh.
 </p>
           <a href="https://wa.me/62895325866470?text=Halo%2C%20saya%20ingin%20booking%20Totok%20Punggung"
-             target="_blank" class="tr-link" onclick="trackCTA('terapi_bekam','Totok Punggung')">
+             target="_blank" class="tr-link"
+             onclick="trackCTA('terapi_bekam','Totok Punggung'); fbq('track', 'Lead', {content_name: 'Totok Punggung', content_category: 'Booking'});">
             Booking Sekarang →
           </a>
         </div>
@@ -416,7 +418,8 @@ src="https://www.facebook.com/tr?id=2082332262587014&ev=PageView&noscript=1"
 </h3>
           <p>Manfaat enzim hirudin dalam terapi lintah untuk membantu melancarkan sirkulasi darah.</p>
           <a href="https://wa.me/62895325866470?text=Halo%2C%20saya%20ingin%20booking%20Terapi%20Lintah"
-             target="_blank" class="tr-link" onclick="trackCTA('terapi_aroma','Terapi Lintah')">
+             target="_blank" class="tr-link"
+             onclick="trackCTA('terapi_aroma','Terapi Lintah'); fbq('track', 'Lead', {content_name: 'Terapi Lintah', content_category: 'Booking'});">
             Booking Sekarang →
           </a>
         </div>
